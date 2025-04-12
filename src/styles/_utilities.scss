@@ -1,0 +1,19 @@
+@mixin generate-spacing-utilities($property, $prefix) {
+  @each $unit in (px, '%', em, rem) {
+    @for $i from 0 through 100 {
+      .#{$prefix}-#{$i}#{$unit} {
+        #{$property}: #{$i}#{$unit};
+      }
+    }
+  }
+}
+
+@include generate-spacing-utilities(padding-left, pl);
+@include generate-spacing-utilities(padding-right, pr);
+@include generate-spacing-utilities(padding-top, pt);
+@include generate-spacing-utilities(padding-bottom, pb);
+
+@include generate-spacing-utilities(margin-left, ml);
+@include generate-spacing-utilities(margin-right, mr);
+@include generate-spacing-utilities(margin-top, mt);
+@include generate-spacing-utilities(margin-bottom, mb);

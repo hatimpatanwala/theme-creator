@@ -1,0 +1,11 @@
+@mixin generate-display-utilities() {
+  $display-values: (block, inline, inline-block, flex, grid, none);
+
+  @each $value in $display-values {
+    .d-#{$value} {
+      display: #{$value};
+    }
+  }
+}
+
+@include generate-display-utilities();

@@ -1,0 +1,17 @@
+// Default theme variables
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$font-family: 'Arial, sans-serif';
+$base-font-size: 16px;
+$base-line-height: 1.5;
+
+// Spacing
+$spacing-unit: 8px;
+
+// Breakpoints
+$breakpoints: (
+  sm: 480px,
+  m: 768px,
+  l: 1024px,
+  xl: 1200px,
+);

@@ -1,0 +1,12 @@
+@mixin generate-size-utilities($property, $prefix) {
+  @each $unit in (px, '%', em, rem, vw, vh) {
+    @for $i from 0 through 100 {
+      .#{$prefix}-#{$i}#{$unit} {
+        #{$property}: #{$i}#{$unit};
+      }
+    }
+  }
+}
+
+@include generate-size-utilities(width, w);
+@include generate-size-utilities(height, h);

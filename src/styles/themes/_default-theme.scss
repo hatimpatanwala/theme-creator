@@ -1,0 +1,21 @@
+$default-theme: (
+  primary-color: #3498db,
+  secondary-color: #2ecc71,
+  font-family: 'Arial, sans-serif',
+  base-font-size: 16px,
+  base-line-height: 1.5,
+  spacing-unit: 8px,
+);
+
+.default-theme {
+  @include theme-variables($default-theme);
+
+  // Theme-specific utilities
+  .text-primary {
+    color: map-get($default-theme, primary-color);
+  }
+
+  .bg-primary {
+    background-color: map-get($default-theme, primary-color);
+  }
+}

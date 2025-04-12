@@ -1,0 +1,26 @@
+@import 'theme-mixin';
+@import 'themes/default-theme';
+@import 'themes/dark-theme';
+
+body {
+  @include theme-variables($default-theme); // Default theme
+}
+
+.default-theme {
+  @include theme-variables($default-theme);
+}
+
+.dark-theme {
+  @include theme-variables($dark-theme);
+}
+
+@import 'mixins';
+@import 'utilities';
+@import 'size-utilities';
+@import 'text-utilities';
+@import 'border-utilities';
+@import 'display-utilities';
+@import 'button-utilities';
+@import 'input-utilities';
+@import 'typography-utilities';
+@import 'components';

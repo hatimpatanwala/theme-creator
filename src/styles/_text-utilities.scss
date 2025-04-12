@@ -1,0 +1,18 @@
+@mixin generate-text-alignment-utilities() {
+  @each $alignment in (left, center, right, justify) {
+    .text-#{$alignment} {
+      text-align: #{$alignment};
+    }
+  }
+}
+
+@mixin generate-font-weight-utilities() {
+  @each $weight, $value in (light: 300, normal: 400, bold: 700) {
+    .font-#{$weight} {
+      font-weight: #{$value};
+    }
+  }
+}
+
+@include generate-text-alignment-utilities();
+@include generate-font-weight-utilities();

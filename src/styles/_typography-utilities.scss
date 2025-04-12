@@ -1,0 +1,35 @@
+@mixin typography-utilities() {
+  .text-small {
+    font-size: 0.875em;
+  }
+
+  .text-large {
+    font-size: 1.25em;
+  }
+
+  .text-uppercase {
+    text-transform: uppercase;
+  }
+
+  .text-lowercase {
+    text-transform: lowercase;
+  }
+
+  .text-capitalize {
+    text-transform: capitalize;
+  }
+
+  .font-light {
+    font-weight: 300;
+  }
+
+  .font-normal {
+    font-weight: 400;
+  }
+
+  .font-bold {
+    font-weight: 700;
+  }
+}
+
+@include typography-utilities();
