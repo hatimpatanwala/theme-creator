@@ -1,0 +1,8 @@
+@mixin theme-variables($theme-map) {
+  $primary-color: map-get($theme-map, primary-color);
+  $secondary-color: map-get($theme-map, secondary-color);
+  $font-family: map-get($theme-map, font-family);
+  $base-font-size: map-get($theme-map, base-font-size);
+  $base-line-height: map-get($theme-map, base-line-height);
+  $spacing-unit: map-get($theme-map, spacing-unit);
+}
