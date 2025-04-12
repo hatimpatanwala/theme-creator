@@ -3,50 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Theme Creator - README</title>
+  
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 2rem;
-      line-height: 1.6;
-      background: #f9f9f9;
-      color: #333;
-    }
-    h1, h2, h3 {
-      color: #2c3e50;
-    }
-    h1 { font-size: 2.5rem; }
-    h2 { font-size: 2rem; margin-top: 2rem; }
-    h3 { font-size: 1.5rem; margin-top: 1.5rem; }
-    code {
-      background: #eee;
-      padding: 2px 6px;
-      border-radius: 4px;
-      font-family: monospace;
-    }
-    pre {
-      background: #2d2d2d;
-      color: #f8f8f2;
-      padding: 1rem;
-      border-radius: 5px;
-      overflow-x: auto;
-    }
-    ul {
-      margin: 1rem 0;
-      padding-left: 1.5rem;
-    }
-    li {
-      margin-bottom: 0.5rem;
-    }
-    a {
-      color: #3498db;
-    }
-    .icon {
-      margin-right: 0.5rem;
-      color: #3498db;
-    }
-  </style>
+  
 </head>
 <body>
 
