@@ -22,7 +22,7 @@
 
 <h2><i class="fas fa-download icon"></i>Installation</h2>
 <h3>1. Clone the Repository</h3>
-<pre><code>git clone https://github.com/yourusername/theme-creator.git
+<pre><code>git clone https://github.com/hatimpatanwala/theme-creator.git
 cd theme-creator</code></pre>
 
 <h3>2. Install Dependencies</h3>
@@ -153,7 +153,7 @@ background-color: map-get($new-theme, primary-color);
 &lt;/div&gt;</code></pre>
 
 <h2><i class="fas fa-balance-scale icon"></i>License</h2>
-<p>This project is licensed under the MIT License.</p>
+<p>This project is licensed under the <a href="https://mit-license.org/"> MIT License.</a></p>
 
 </body>
 </html>
