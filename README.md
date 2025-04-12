@@ -1,43 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theme Creator - README</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 2rem;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; margin-top: 2rem; }
+    h3 { font-size: 1.5rem; margin-top: 1.5rem; }
+    code {
+      background: #eee;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    pre {
+      background: #2d2d2d;
+      color: #f8f8f2;
+      padding: 1rem;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    ul {
+      margin: 1rem 0;
+      padding-left: 1.5rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    a {
+      color: #3498db;
+    }
+    .icon {
+      margin-right: 0.5rem;
+      color: #3498db;
+    }
+  </style>
+</head>
+<body>
 
+<h1><i class="fas fa-paint-brush icon"></i>Theme Creator</h1>
+<p>This project provides a flexible theming system using SCSS. It can be integrated into any project, whether you're using React, Angular, Vue, or no framework at all.</p>
 
-Theme Creator
-This project provides a flexible theming system using SCSS. It can be integrated into any project, whether you're using React, Angular, Vue, or no framework at all.
-Features
-Responsive Design: Easily create responsive layouts with configurable breakpoints.
-Utility Classes: Use a wide range of utility classes for common CSS properties.
-Customizable Themes: Adjust SCSS variables to create custom themes.
-Dynamic Theme Switching: Switch themes dynamically using CSS classes.
-Installation
-1.
-Clone the Repository: Clone the repository to your local machine.
-git clone https://github.com/yourusername/theme-creator.git
-cd theme-creator
-2.
-Install Dependencies: Run npm install to install the necessary dependencies.
-Usage
-Without a Framework
-1.
-Compile SCSS: Use a tool like Sass to compile the SCSS files into CSS.
-npx sass src/styles/main.scss dist/styles.css
-2.
-Include CSS: Add the compiled CSS file to your HTML.
-<link rel="stylesheet" href="dist/styles.css">
-Apply
-3.
-Toggle Themes: Use JavaScript to toggle theme classes on the <body> or a main container.
-<button onclick="document.body.classList.toggle('dark-theme')">Toggle Theme</button>
-Apply
-React
-1.
-Compile SCSS: Use a tool like Sass to compile the SCSS files into CSS.
-npx sass src/styles/main.scss src/styles.css
-2.
-Import CSS: Import the compiled CSS file in your React component.
-import './styles.css';
-Apply
-3.
-Toggle Themes: Use state to manage theme classes.
-import React, { useState } from 'react';
+<h2><i class="fas fa-star icon"></i>Features</h2>
+<ul>
+  <li><strong>Responsive Design:</strong> Easily create responsive layouts with configurable breakpoints.</li>
+  <li><strong>Utility Classes:</strong> Use a wide range of utility classes for common CSS properties.</li>
+  <li><strong>Customizable Themes:</strong> Adjust SCSS variables to create custom themes.</li>
+  <li><strong>Dynamic Theme Switching:</strong> Switch themes dynamically using CSS classes.</li>
+</ul>
+
+<h2><i class="fas fa-download icon"></i>Installation</h2>
+<h3>1. Clone the Repository</h3>
+<pre><code>git clone https://github.com/yourusername/theme-creator.git
+cd theme-creator</code></pre>
+
+<h3>2. Install Dependencies</h3>
+<pre><code>npm install</code></pre>
+
+<h2><i class="fas fa-play icon"></i>Usage</h2>
+
+<h3>Without a Framework</h3>
+<pre><code>npx sass src/styles/main.scss dist/styles.css</code></pre>
+
+<pre><code>&lt;link rel="stylesheet" href="dist/styles.css"&gt;</code></pre>
+
+<pre><code>&lt;button onclick="document.body.classList.toggle('dark-theme')"&gt;Toggle Theme&lt;/button&gt;</code></pre>
+
+<h3>React</h3>
+<pre><code>npx sass src/styles/main.scss src/styles.css</code></pre>
+
+<pre><code>import './styles.css';</code></pre>
+
+<pre><code>import React, { useState } from 'react';
 import './styles.css';
 
 function App() {
@@ -48,34 +94,29 @@ function App() {
   };
 
   return (
-    <div className={theme}>
-      <button onClick={toggleTheme}>Toggle Theme</button>
-    </div>
+    &lt;div className={theme}&gt;
+      &lt;button onClick={toggleTheme}&gt;Toggle Theme&lt;/button&gt;
+    &lt;/div&gt;
   );
 }
 
-export default App;
-Apply
-Angular
-1.
-Compile SCSS: Use a tool like Sass to compile the SCSS files into CSS.
-npx sass src/styles/main.scss src/styles.css
-2.
-Include CSS: Add the compiled CSS file to your angular.json.
-"styles": [
+export default App;</code></pre>
+
+<h3>Angular</h3>
+<pre><code>npx sass src/styles/main.scss src/styles.css</code></pre>
+
+<pre><code>"styles": [
   "src/styles.css"
-]
-Apply
-3.
-Toggle Themes: Use Angular's binding to toggle theme classes.
-import { Component } from '@angular/core';
+]</code></pre>
+
+<pre><code>import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   template: `
-    <div [ngClass]="theme">
-      <button (click)="toggleTheme()">Toggle Theme</button>
-    </div>
+    &lt;div [ngClass]="theme"&gt;
+      &lt;button (click)="toggleTheme()"&gt;Toggle Theme&lt;/button&gt;
+    &lt;/div&gt;
   `,
   styleUrls: ['./app.component.css']
 })
@@ -85,25 +126,20 @@ export class AppComponent {
   toggleTheme() {
     this.theme = this.theme === 'default-theme' ? 'dark-theme' : 'default-theme';
   }
-}
-Apply
-Vue
-1.
-Compile SCSS: Use a tool like Sass to compile the SCSS files into CSS.
-npx sass src/styles/main.scss src/styles.css
-2.
-Import CSS: Import the compiled CSS file in your Vue component.
-import './styles.css';
-Apply
-3.
-Toggle Themes: Use Vue's data binding to manage theme classes.
-<template>
-  <div :class="theme">
-    <button @click="toggleTheme">Toggle Theme</button>
-  </div>
-</template>
+}</code></pre>
 
-<script>
+<h3>Vue</h3>
+<pre><code>npx sass src/styles/main.scss src/styles.css</code></pre>
+
+<pre><code>import './styles.css';</code></pre>
+
+<pre><code>&lt;template&gt;
+  &lt;div :class="theme"&gt;
+    &lt;button @click="toggleTheme"&gt;Toggle Theme&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
 export default {
   data() {
     return {
@@ -116,15 +152,13 @@ export default {
     }
   }
 };
-</script>
+&lt;/script&gt;
 
-<style src="./styles.css"></style>
-Apply
-Creating a New Theme
-1.
-Create a New Theme File: In the src/styles/themes directory, create a new SCSS file for your theme.
-File: /path/to/your/project/src/styles/themes/_new-theme.scss
-$new-theme: (
+&lt;style src="./styles.css"&gt;&lt;/style&gt;</code></pre>
+
+<h2><i class="fas fa-magic icon"></i>Creating a New Theme</h2>
+<h3>1. Create a New Theme File</h3>
+<pre><code>$new-theme: (
   primary-color: #ff6347,
   secondary-color: #4682b4,
   font-family: 'Courier New, monospace',
@@ -134,36 +168,33 @@ $new-theme: (
 );
 
 .new-theme {
-  @include theme-variables($new-theme);
+@include theme-variables($new-theme);
 
-  // Theme-specific utilities
-  .text-primary {
-    color: map-get($new-theme, primary-color);
-  }
-
-  .bg-primary {
-    background-color: map-get($new-theme, primary-color);
-  }
+.text-primary {
+color: map-get($new-theme, primary-color);
 }
-Apply
-2.
-Import the New Theme: Add the new theme to your main.scss file.
-File: /path/to/your/project/src/styles/main.scss
-@import 'theme-mixin';
+
+.bg-primary {
+background-color: map-get($new-theme, primary-color);
+}
+}</code></pre>
+
+<h3>2. Import the New Theme</h3>
+<pre><code>@import 'theme-mixin';
 @import 'themes/default-theme';
 @import 'themes/dark-theme';
-@import 'themes/new-theme'; // Import your new theme here
+@import 'themes/new-theme';</code></pre>
 
-// ... existing code
-Apply
-3.
-Rebuild the Project: Run npx sass src/styles/main.scss src/styles.css to compile the new theme into your CSS.
-4.
-Use the New Theme: Apply the new theme class in your HTML or component.
-<div class="new-theme">
-  <p class="text-primary">This text uses the primary color of the new theme.</p>
-</div>
-Apply
-License
-This project is licensed under the MIT License.
-This README provides a comprehensive guide for using the theme creator project across different environments and explains how to create and integrate new themes. Adjust the instructions as needed to fit your specific project setup.
+<h3>3. Rebuild the Project</h3>
+<pre><code>npx sass src/styles/main.scss src/styles.css</code></pre>
+
+<h3>4. Use the New Theme</h3>
+<pre><code>&lt;div class="new-theme"&gt;
+  &lt;p class="text-primary"&gt;This text uses the primary color of the new theme.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+<h2><i class="fas fa-balance-scale icon"></i>License</h2>
+<p>This project is licensed under the MIT License.</p>
+
+</body>
+</html>
